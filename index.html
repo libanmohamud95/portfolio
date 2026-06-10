@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liban Mohamud — UX Designer</title>
+  <meta name="description" content="UX designer making things click. I design products that solve real problems — from first sketch to shipped interface." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Liban Mohamud</a>
+      <nav class="nav__links">
+        <a href="#work">Projects</a>
+        <a href="#contact" class="btn btn--outline">Let's talk</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="#work">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Hello, I'm Liban</p>
+      <h1 class="hero__heading">
+        UX designer<br />making things<br /><em>click.</em>
+      </h1>
+      <p class="hero__sub">
+        I design products that solve real problems — from<br class="br-desktop" />
+        first sketch to shipped interface. Working globally.
+      </p>
+      <div class="hero__cta">
+        <a href="#work" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="hero__link">Get in touch <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <span class="hero__available">Available for projects</span>
+      <div class="hero__illustration">
+        <div class="city">
+          <div class="city__light"></div>
+          <div class="city__tower city__tower--tall"></div>
+          <div class="city__tower city__tower--mid"></div>
+          <div class="city__tower city__tower--dome">
+            <div class="city__dome"></div>
+          </div>
+          <div class="city__tower city__tower--flag">
+            <div class="city__flag"></div>
+          </div>
+          <div class="city__base"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services__grid">
+      <div class="service">
+        <span class="service__num">01</span>
+        <h3 class="service__title">UX / UI Design</h3>
+        <p class="service__desc">Research, flows, wireframes — all phases of the design process, start to finish.</p>
+      </div>
+      <div class="service">
+        <span class="service__num">02</span>
+        <h3 class="service__title">Web Design</h3>
+        <p class="service__desc">Landing pages to full web apps, built from scratch or redesigned with purpose.</p>
+      </div>
+      <div class="service">
+        <span class="service__num">03</span>
+        <h3 class="service__title">Prototyping</h3>
+        <p class="service__desc">Interactive Figma and InVision prototypes that make ideas tangible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="work" id="work">
+    <div class="work__header">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-heading">Projects that<br /><em>matter.</em></h2>
+    </div>
+    <div class="work__grid">
+
+      <article class="project project--wide">
+        <div class="project__image project__image--1">
+          <div class="project__placeholder">
+            <span>Project Mockup</span>
+          </div>
+        </div>
+        <div class="project__info">
+          <div class="project__meta">
+            <span class="project__tag">UX Design</span>
+            <span class="project__tag">Mobile</span>
+          </div>
+          <h3 class="project__title">Project One</h3>
+          <p class="project__desc">A brief description of the project, what problem it solved and the outcome achieved.</p>
+          <a href="#" class="project__link">View case study <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="project project--wide project--reverse">
+        <div class="project__image project__image--2">
+          <div class="project__placeholder">
+            <span>Project Mockup</span>
+          </div>
+        </div>
+        <div class="project__info">
+          <div class="project__meta">
+            <span class="project__tag">Web Design</span>
+            <span class="project__tag">Branding</span>
+          </div>
+          <h3 class="project__title">Project Two</h3>
+          <p class="project__desc">A brief description of the project, what problem it solved and the outcome achieved.</p>
+          <a href="#" class="project__link">View case study <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <div class="project__row">
+        <article class="project project--card">
+          <div class="project__image project__image--3">
+            <div class="project__placeholder"><span>Mockup</span></div>
+          </div>
+          <div class="project__info">
+            <div class="project__meta">
+              <span class="project__tag">Prototyping</span>
+            </div>
+            <h3 class="project__title">Project Three</h3>
+            <p class="project__desc">Short description of the work and result.</p>
+            <a href="#" class="project__link">View <span class="arrow">→</span></a>
+          </div>
+        </article>
+        <article class="project project--card">
+          <div class="project__image project__image--4">
+            <div class="project__placeholder"><span>Mockup</span></div>
+          </div>
+          <div class="project__info">
+            <div class="project__meta">
+              <span class="project__tag">UX Research</span>
+            </div>
+            <h3 class="project__title">Project Four</h3>
+            <p class="project__desc">Short description of the work and result.</p>
+            <a href="#" class="project__link">View <span class="arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__text">
+        <p class="section-label">About</p>
+        <h2 class="section-heading">Design with<br /><em>intention.</em></h2>
+        <p class="about__body">
+          I'm a UX designer focused on crafting digital experiences that are both beautiful and purposeful.
+          My process starts with understanding people — their goals, frustrations, and context — before a single pixel is placed.
+        </p>
+        <p class="about__body">
+          With experience across startups and established brands, I bring a pragmatic approach to design:
+          shipping work that's well-considered, tested, and built to last.
+        </p>
+        <div class="about__skills">
+          <div class="skill-group">
+            <h4>Design</h4>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>Sketch</li>
+              <li>InVision</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Process</h4>
+            <ul>
+              <li>User Research</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+              <li>Usability Testing</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Delivery</h4>
+            <ul>
+              <li>Design Systems</li>
+              <li>Handoff to Dev</li>
+              <li>HTML / CSS</li>
+              <li>Webflow</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="about__portrait">
+        <div class="about__portrait-frame">
+          <div class="about__portrait-placeholder">LM</div>
+        </div>
+        <div class="about__stat">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Years experience</span>
+        </div>
+        <div class="about__stat about__stat--2">
+          <span class="stat-num">40+</span>
+          <span class="stat-label">Projects shipped</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <p class="section-label">Contact</p>
+      <h2 class="contact__heading">Got a project?<br /><em>Let's talk.</em></h2>
+      <p class="contact__sub">I'm currently available for freelance and full-time opportunities. Drop me a message and I'll get back to you within 24 hours.</p>
+      <a href="mailto:hello@libanmohamud.com" class="btn btn--primary btn--large">Say hello →</a>
+      <div class="contact__links">
+        <a href="https://linkedin.com/in/libanmohamud" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://dribbble.com/libanmohamud" target="_blank" rel="noopener">Dribbble</a>
+        <a href="https://read.cv/libanmohamud" target="_blank" rel="noopener">Read.cv</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="footer__name">Liban Mohamud</span>
+      <span class="footer__copy">© 2025 — All rights reserved</span>
+      <a href="#hero" class="footer__back">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
