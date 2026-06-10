@@ -530,11 +530,75 @@ a:hover .arrow { transform: translateX(4px); }
   letter-spacing: 0.05em;
 }
 
-/* Colour tints per card */
-.project__image--1 { background: linear-gradient(135deg, #1a2235, #0d1520); }
-.project__image--2 { background: linear-gradient(135deg, #221a0e, #1a1208); }
-.project__image--3 { background: linear-gradient(135deg, #1a2820, #0d1a12); }
-.project__image--4 { background: linear-gradient(135deg, #231522, #160e17); }
+/* Project brand colours */
+.project__image--1 {
+  background: #f4695a;
+  position: relative;
+  overflow: hidden;
+}
+.project__image--1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(244,105,90,0.9) 0%, rgba(200,60,40,0.95) 100%);
+}
+.project__image--1 .project__placeholder { color: rgba(255,255,255,0.4); position: relative; }
+
+.project__image--2 {
+  background: #1a1a2e;
+  position: relative;
+  overflow: hidden;
+}
+.project__image--2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+}
+.project__image--2 .project__placeholder { color: rgba(255,255,255,0.25); position: relative; }
+
+.project__image--3 {
+  background: #080e11;
+  position: relative;
+  overflow: hidden;
+}
+.project__image--3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #080e11 0%, #0d1a22 60%, #080e11 100%);
+}
+.project__image--3 .project__placeholder { color: rgba(255,255,255,0.2); position: relative; }
+
+.project__image--4 {
+  background: #0a0a1a;
+  position: relative;
+  overflow: hidden;
+}
+.project__image--4::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #120a2e 0%, #0a0a1a 100%);
+}
+.project__image--4 .project__placeholder { color: rgba(255,255,255,0.2); position: relative; }
+
+/* Browser chrome mockup on project images */
+.project__image::after {
+  content: '● ● ●';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 14px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+}
 
 .project__info {}
 
