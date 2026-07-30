@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liban Mohamud — UX Designer</title>
-  <meta name="description" content="UX designer making things click. I design products that solve real problems — from first sketch to shipped interface." />
+  <title>Liban Mohamud — Freelance UX &amp; Product Designer</title>
+  <meta name="description" content="Freelance UX & product designer. I combine research, prototyping and visual design to turn complex problems into elegant, usable products." />
   <meta name="author" content="Liban Mohamud" />
   <link rel="canonical" href="https://libanmohamud.com/" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Liban Mohamud — UX Designer" />
-  <meta property="og:description" content="UX designer making things click. I design products that solve real problems — from first sketch to shipped interface." />
+  <meta property="og:title" content="Liban Mohamud — Freelance UX & Product Designer" />
+  <meta property="og:description" content="I combine research, prototyping and visual design to turn complex problems into elegant, usable products." />
   <meta property="og:url" content="https://libanmohamud.com/" />
   <meta property="og:type" content="website" />
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Liban Mohamud — UX Designer" />
-  <meta name="twitter:description" content="UX designer making things click." />
+  <meta name="twitter:title" content="Liban Mohamud — Freelance UX & Product Designer" />
+  <meta name="twitter:description" content="Freelance UX & product designer." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,232 +26,203 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo">Liban Mohamud</a>
-      <nav class="nav__links">
-        <a href="#work">Projects</a>
-        <a href="#contact" class="btn btn--outline">Let's talk</a>
-      </nav>
+      <a href="#home" class="nav__logo"><span class="nav__mark"></span>Liban M</a>
+      <ul class="nav__links">
+        <li><button class="nav__link" data-scroll-to="about">About me</button></li>
+        <li><button class="nav__link" data-scroll-to="services">Services</button></li>
+        <li><button class="nav__link" data-scroll-to="projects">Projects</button></li>
+        <li><button class="btn btn--primary btn--pill" data-scroll-to="contact">Get in touch</button></li>
+      </ul>
       <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span>
       </button>
     </div>
     <div class="nav__mobile">
-      <a href="#work">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <button data-scroll-to="about">About me</button>
+      <button data-scroll-to="services">Services</button>
+      <button data-scroll-to="projects">Projects</button>
+      <button data-scroll-to="contact">Get in touch</button>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Hello, I'm Liban</p>
-      <h1 class="hero__heading">
-        UX designer<br />making things<br /><em>click.</em>
-      </h1>
-      <p class="hero__sub">
-        I design products that solve real problems — from<br class="br-desktop" />
-        first sketch to shipped interface. Working globally.
-      </p>
-      <div class="hero__cta">
-        <a href="#work" class="btn btn--primary">View Projects</a>
-        <a href="#contact" class="hero__link">Get in touch <span class="arrow">→</span></a>
-      </div>
-    </div>
-    <div class="hero__visual">
-      <span class="hero__available">Available for projects</span>
-      <div class="hero__illustration">
-        <div class="city">
-          <div class="city__light"></div>
-          <div class="city__tower city__tower--tall"></div>
-          <div class="city__tower city__tower--mid"></div>
-          <div class="city__tower city__tower--dome">
-            <div class="city__dome"></div>
-          </div>
-          <div class="city__tower city__tower--flag">
-            <div class="city__flag"></div>
-          </div>
-          <div class="city__base"></div>
+  <section class="section section--hero" id="home" data-observe="home">
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">Hello there, I'm Liban</p>
+        <h1 class="h1">Freelance UX &amp; product designer.</h1>
+        <p class="hero__sub">I combine research, prototyping and visual design to turn complex problems into elegant, usable products. What drew me to design was simple: understanding what people actually need, then making their lives a little easier.</p>
+        <div class="hero__cta">
+          <button class="btn btn--primary" data-scroll-to="projects">My projects</button>
+          <button class="btn btn--outline" data-scroll-to="contact">Get in touch</button>
         </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__mesh"></div>
+        <div class="hero__badge hero__badge--1"><span class="hero__badge-dot" style="background:var(--accent-2)"></span>UX Research</div>
+        <div class="hero__badge hero__badge--2"><span class="hero__badge-dot" style="background:var(--accent-3)"></span>Prototyping</div>
+        <div class="hero__badge hero__badge--3"><span class="hero__badge-dot" style="background:var(--accent)"></span>Visual Design</div>
+        <div class="hero__badge hero__badge--4"><span class="hero__badge-dot" style="background:var(--accent-2)"></span>AI-assisted design</div>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="services__grid">
-      <div class="service">
-        <span class="service__num">01</span>
-        <h3 class="service__title">UX / UI Design</h3>
-        <p class="service__desc">Research, flows, wireframes — all phases of the design process, start to finish.</p>
-      </div>
-      <div class="service">
-        <span class="service__num">02</span>
-        <h3 class="service__title">Web Design</h3>
-        <p class="service__desc">Landing pages to full web apps, built from scratch or redesigned with purpose.</p>
-      </div>
-      <div class="service">
-        <span class="service__num">03</span>
-        <h3 class="service__title">Prototyping</h3>
-        <p class="service__desc">Interactive Figma and InVision prototypes that make ideas tangible.</p>
+  <section class="section" id="services" data-observe="services">
+    <div class="container">
+      <p class="eyebrow">What I do</p>
+      <h2 class="h2">Three ways I can help your product.</h2>
+
+      <div class="grid-3 mt-50">
+        <div class="card service-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"></path></svg>
+          <h3>UI/UX design</h3>
+          <p>User research and personas, feature planning, user flows, wireframes, UI design, prototyping and testing. I can support any phase of the design process.</p>
+        </div>
+        <div class="card service-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3ECFB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18M8 4v14"></path></svg>
+          <h3>Web design</h3>
+          <p>Whether it's a landing page, marketing site, storefront or full web app, I design it start to finish, or give an existing site a proper redesign.</p>
+        </div>
+        <div class="card service-card">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F5B942" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a5 5 0 01-6.6 6.6L4.1 22.9a2 2 0 01-2.8-2.8L11.4 9a5 5 0 016.6-6.6z"></path></svg>
+          <h3>Tools</h3>
+          <p>Figma, Sketch, the Adobe suite and InVision: enough range to build interactive prototypes and pixel-perfect UI, and to present work properly.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SELECTED WORK -->
-  <section class="work" id="work">
-    <div class="work__header">
-      <p class="section-label">Selected Work</p>
-      <h2 class="section-heading">Projects that<br /><em>matter.</em></h2>
-    </div>
-    <div class="work__grid">
+  <!-- PROJECTS -->
+  <section class="section" id="projects" data-observe="projects">
+    <div class="container">
+      <p class="eyebrow">My projects</p>
+      <h2 class="h2">Featured case studies.</h2>
 
-      <article class="project project--wide">
-        <div class="project__image project__image--1">
-          <div class="project__placeholder">
-            <span>Project Mockup</span>
-          </div>
-        </div>
-        <div class="project__info">
-          <div class="project__meta">
-            <span class="project__tag">Web Design</span>
-            <span class="project__tag">UX / UI</span>
-          </div>
-          <h3 class="project__title">Muswell Hill Karate Academy</h3>
-          <p class="project__desc">Redesigned the academy's website to better reflect their dynamic brand identity — creating a modern, mobile-responsive experience that clearly communicates class benefits and drives enrolment inquiries.</p>
-          <a href="#" class="project__link">View case study <span class="arrow">→</span></a>
-        </div>
-      </article>
-
-      <article class="project project--wide project--reverse">
-        <div class="project__image project__image--2">
-          <div class="project__placeholder">
-            <span>Project Mockup</span>
-          </div>
-        </div>
-        <div class="project__info">
-          <div class="project__meta">
-            <span class="project__tag">UX Design</span>
-            <span class="project__tag">Mobile App</span>
-          </div>
-          <h3 class="project__title">Munch</h3>
-          <p class="project__desc">Designed a food delivery app with a social twist — letting Gen Z and Millennials see what friends are ordering and share reviews. Full UX process from competitor analysis and user research through to wireframes and low-fidelity prototypes.</p>
-          <a href="#" class="project__link">View case study <span class="arrow">→</span></a>
-        </div>
-      </article>
-
-      <div class="project__row">
-        <article class="project project--card">
-          <div class="project__image project__image--3">
-            <div class="project__placeholder"><span>Mockup</span></div>
-          </div>
-          <div class="project__info">
-            <div class="project__meta">
-              <span class="project__tag">Web Design</span>
-              <span class="project__tag">UX / UI</span>
+      <div class="grid-2 mt-50">
+        <article class="card project-card">
+          <div class="project-card__cover tok-cover">
+            <div class="browser-window">
+              <div class="browser-window__bar">
+                <span class="browser-window__dot browser-window__dot--red"></span>
+                <span class="browser-window__dot browser-window__dot--yellow"></span>
+                <span class="browser-window__dot browser-window__dot--green"></span>
+                <span class="browser-window__url">tokenizedpod.com</span>
+              </div>
+              <div class="browser-window__body">
+                <img src="assets/case-studies/tokenized-real-crop.png" alt="Tokenized homepage" />
+              </div>
             </div>
-            <h3 class="project__title">Sporting Crypto</h3>
-            <p class="project__desc">Redesigned the #1 Sports & Web3 analysis platform — enhancing UX across events, insights, and newsletter sections for a global blockchain-meets-sports audience.</p>
-            <a href="#" class="project__link">View <span class="arrow">→</span></a>
+            <div class="project-card__badges">
+              <span class="project-card__tag">Product Designer</span>
+              <span class="project-card__tag--outline">Sole designer</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h3>Tokenized</h3>
+            <p>Designed and built the website for Tokenized, a leading stablecoin and onchain real-world-asset media network.</p>
+            <a href="tokenized.html" class="project-card__link">View project <span class="arrow">→</span></a>
           </div>
         </article>
-        <article class="project project--card">
-          <div class="project__image project__image--4">
-            <div class="project__placeholder"><span>Mockup</span></div>
-          </div>
-          <div class="project__info">
-            <div class="project__meta">
-              <span class="project__tag">Web Design</span>
+
+        <article class="card project-card">
+          <div class="project-card__cover munch-cover">
+            <img class="munch-cover__phone munch-cover__phone--left" src="assets/case-studies/munch-friends-snapshot.png" alt="Munch app Friends activity screen" />
+            <img class="munch-cover__phone munch-cover__phone--center" src="assets/case-studies/munch-home-snapshot.png" alt="Munch app Home screen" />
+            <img class="munch-cover__phone munch-cover__phone--right" src="assets/case-studies/munch-split-snapshot.png" alt="Munch app Split bill screen" />
+            <div class="project-card__badges">
+              <span class="project-card__tag">UX Case Study</span>
             </div>
-            <h3 class="project__title">Tokenized</h3>
-            <p class="project__desc">Designed and built the website for the leading blockchain and real-world asset media network — trusted by Stripe, Revolut, Visa, and more.</p>
-            <a href="#" class="project__link">View <span class="arrow">→</span></a>
+          </div>
+          <div class="project-card__body">
+            <h3>Munch</h3>
+            <p>A food delivery app concept with social features built for Gen Z and millennial users who order with their friends in mind.</p>
+            <a href="munch.html" class="project-card__link">View project <span class="arrow">→</span></a>
           </div>
         </article>
       </div>
-
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about__inner">
-      <div class="about__left">
-        <p class="section-label">About</p>
-        <h2 class="section-heading">Design with<br /><em>intention.</em></h2>
-        <blockquote class="about__quote">
-          "Good design disappears.<br />Great design is never forgotten."
-        </blockquote>
-        <div class="about__stats">
-          <div class="about__stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Years experience</span>
-          </div>
+  <section class="section" id="about" data-observe="about">
+    <div class="container about-grid">
+      <div>
+        <p class="eyebrow">About me</p>
+        <h2 class="h2" style="max-width:600px;">Highly effective, well-rounded designer.</h2>
+        <p class="muted" style="margin-top:22px;max-width:560px;">I got into UX/UI design in 2020 and haven't looked back. Blending creativity and functionality to craft user-centred products is genuinely what I enjoy most.</p>
+        <p class="muted" style="margin-top:16px;max-width:560px;">Away from the screen, I coach a primary school football team on cold London Saturday mornings, cheer for Arsenal, and I've recently picked up padel — a very good way to spend the parts of the week not glued to Figma.</p>
+        <button class="btn btn--primary" style="margin-top:28px;" data-scroll-to="contact">Get in touch</button>
+      </div>
+      <div class="card about-stats">
+        <div>
+          <div class="about-stat__value accent-2">2020</div>
+          <div class="about-stat__label">Started designing professionally</div>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <div class="about-stat__value accent-3">Figma</div>
+          <div class="about-stat__label">Sketch, Adobe Suite &amp; InVision too</div>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <div class="about-stat__value accent">London</div>
+          <div class="about-stat__label">Based here, open to remote work</div>
         </div>
       </div>
-      <div class="about__right">
-        <p class="about__body">
-          I'm a UX designer focused on crafting digital experiences that are both beautiful and purposeful.
-          My process starts with understanding people — their goals, frustrations, and context — before a single pixel is placed.
-        </p>
-        <p class="about__body">
-          With experience across startups and established brands, I bring a pragmatic approach to design:
-          shipping work that's well-considered, tested, and built to last.
-        </p>
-        <div class="about__skills">
-          <div class="skill-group">
-            <h4>Design</h4>
-            <ul>
-              <li>Figma</li>
-              <li>Adobe XD</li>
-              <li>Sketch</li>
-              <li>InVision</li>
-            </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Client feedback</p>
+      <h2 class="h2">Kind words from clients.</h2>
+
+      <div class="grid-3 mt-50">
+        <div class="card testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"Liban's design skills are exceptional, resulting in a visually stunning and user-friendly design. He is a great communicator, incorporating feedback seamlessly and delivering on time."</p>
+          <div>
+            <div class="testimonial-card__name">Mihai Chirila</div>
+            <div class="testimonial-card__loc">London</div>
           </div>
-          <div class="skill-group">
-            <h4>Process</h4>
-            <ul>
-              <li>User Research</li>
-              <li>Wireframing</li>
-              <li>Prototyping</li>
-              <li>Usability Testing</li>
-            </ul>
+        </div>
+        <div class="card testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"Liban has great attention to detail and his creative flair brings life and user-friendliness to every project he touches. He takes the user experience to a whole new level."</p>
+          <div>
+            <div class="testimonial-card__name">Ahmed Hassan</div>
+            <div class="testimonial-card__loc">London</div>
           </div>
-          <div class="skill-group">
-            <h4>Delivery</h4>
-            <ul>
-              <li>Design Systems</li>
-              <li>Handoff to Dev</li>
-              <li>HTML / CSS</li>
-              <li>Webflow</li>
-            </ul>
+        </div>
+        <div class="card testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__quote">"As a non-profit often facing financial constraints, Liban's assistance was invaluable. He swiftly put together a pitch at very short notice. His commitment and talent make him indispensable."</p>
+          <div>
+            <div class="testimonial-card__name">Hafid Ali</div>
+            <div class="testimonial-card__loc">London</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact__inner">
-      <p class="section-label">Contact</p>
-      <h2 class="contact__heading">Got a project?<br /><em>Let's talk.</em></h2>
-      <p class="contact__sub">I'm currently available for freelance and full-time opportunities. Drop me a message and I'll get back to you within 24 hours.</p>
-      <a href="mailto:libanmohamud95@gmail.com" class="btn btn--primary btn--large">Say hello →</a>
-      <div class="contact__links">
-        <a href="https://linkedin.com/in/libanmohamud" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://dribbble.com/libanmohamud" target="_blank" rel="noopener">Dribbble</a>
-        <a href="https://read.cv/libanmohamud" target="_blank" rel="noopener">Read.cv</a>
+  <!-- CONTACT / FOOTER -->
+  <footer class="contact-footer" id="contact" data-observe="contact">
+    <div class="container">
+      <div class="contact-footer__row">
+        <div>
+          <p class="eyebrow">Let's work together</p>
+          <h2 class="h2 h2--footer">Reach out to me.</h2>
+        </div>
+        <div class="contact-footer__links">
+          <a href="mailto:libanmohamud95@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/liban-mohamud-b20569123/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://dribbble.com/LibanMohamud" target="_blank" rel="noopener">Dribbble</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <span class="footer__name">Liban Mohamud</span>
-      <span class="footer__copy">© 2025 — All rights reserved</span>
-      <a href="#hero" class="footer__back">Back to top ↑</a>
+      <p class="contact-footer__copy">© 2026, Liban Mohamud. All rights reserved.</p>
     </div>
   </footer>
 
