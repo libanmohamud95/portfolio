@@ -1,4 +1,17 @@
 // ============================================================
+// MARQUEE: duplicate track content once so the CSS loop (0 -> -50%)
+// is seamless, unless the visitor asked for reduced motion.
+// ============================================================
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.marquee__track').forEach((track) => {
+    track.innerHTML += track.innerHTML;
+    track.querySelectorAll(':scope > *:nth-child(n + ' + (track.children.length / 2 + 1) + ')').forEach((el) => {
+      el.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
+
+// ============================================================
 // IMAGE SLOTS: neutral empty-state placeholder (icon), matching the
 // design handoff's <image-slot> component — no photo was supplied for
 // these spots, so they stay as placeholders until real photos are added.
