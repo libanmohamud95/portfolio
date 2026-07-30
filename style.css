@@ -695,6 +695,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   background: linear-gradient(135deg, var(--accent-2), var(--accent));
   margin-bottom: 12px;
 }
+.preview-card__avatar.photo-fill { width: 34px; height: 34px; }
 .preview-card__thumb {
   height: 64px;
   border-radius: 10px;
