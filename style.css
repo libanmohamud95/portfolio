@@ -1300,6 +1300,15 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .img-slot--rect { border-radius: 18px; }
 .img-slot--rounded-sm { border-radius: 12px; }
 
+/* Real photo filling a slot (once supplied) */
+.photo-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.photo-fill--circle { border-radius: 50%; }
+
 .player-card {
   background: var(--surface);
   border: 1px solid var(--border);
