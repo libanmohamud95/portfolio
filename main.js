@@ -1,4 +1,17 @@
 // ============================================================
+// IMAGE SLOTS: neutral empty-state placeholder (icon), matching the
+// design handoff's <image-slot> component — no photo was supplied for
+// these spots, so they stay as placeholders until real photos are added.
+// ============================================================
+const IMG_SLOT_ICON =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' +
+  '<rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle>' +
+  '<path d="m21 15-5-5L5 21"></path></svg>';
+document.querySelectorAll('.img-slot').forEach((slot) => {
+  slot.innerHTML = IMG_SLOT_ICON;
+});
+
+// ============================================================
 // NAV: scroll effect, smooth scroll, scroll-spy, mobile menu
 // ============================================================
 const nav = document.getElementById('nav');
