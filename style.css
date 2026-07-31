@@ -726,6 +726,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   background: var(--surface-2);
   margin-bottom: 10px;
 }
+.preview-card__thumb.photo-fill { width: 100%; height: 64px; }
 .preview-card__title { font-size: 0.82rem; font-weight: 600; }
 .preview-card__meta { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
 
