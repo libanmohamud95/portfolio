@@ -1424,6 +1424,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   width: 92px; height: 78px; border-radius: 12px;
   background: linear-gradient(135deg, rgba(255,107,74,0.18), rgba(62,207,176,0.18));
 }
+.munch-rec.photo-fill { width: 92px; height: 78px; }
 .munch-rec-name { font-size: 0.72rem; font-weight: 600; margin-top: 6px; }
 .munch-rec-meta { font-size: 0.68rem; color: #6E6876; }
 
