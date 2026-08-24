@@ -982,6 +982,13 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   letter-spacing: 0.06em;
 }
 .persona-card p { color: var(--muted); font-size: 0.9rem; }
+.persona-card__quote {
+  font-style: italic;
+  color: var(--text);
+  font-size: 0.86rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+}
 .persona-card__tags {
   display: flex;
   gap: 8px;
