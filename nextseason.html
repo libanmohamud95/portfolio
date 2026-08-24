@@ -19,6 +19,7 @@
       <a href="index.html" class="nav__logo"><span class="nav__mark"></span>Liban M</a>
       <ul class="nav__links">
         <li><button class="nav__link" data-scroll-to="brief">Brief</button></li>
+        <li><button class="nav__link" data-scroll-to="research">Research</button></li>
         <li><button class="nav__link" data-scroll-to="role">Role</button></li>
         <li><button class="nav__link" data-scroll-to="process">Process</button></li>
         <li><button class="nav__link" data-scroll-to="product">Product</button></li>
@@ -31,6 +32,7 @@
     </div>
     <div class="nav__mobile">
       <button data-scroll-to="brief">Brief</button>
+      <button data-scroll-to="research">Research</button>
       <button data-scroll-to="role">Role</button>
       <button data-scroll-to="process">Process</button>
       <button data-scroll-to="product">Product</button>
@@ -72,12 +74,61 @@
     <div class="container">
       <p class="eyebrow">The problem</p>
       <h2 class="h2">Following a show shouldn't mean checking five apps.</h2>
-      <p class="lede" style="max-width:660px;">This started from my own habit, not a formal research study — but the underlying problem is a common one. Shows are scattered across platforms, "renewed" news is usually just a rumour repeated across fan sites, and there's no single reliable place that tells you: is this actually confirmed, when's it landing, and where do I watch it.</p>
+      <p class="lede" style="max-width:660px;">This started from my own habit, not a formal research study. Shows are scattered across platforms, "renewed" news is usually just a rumour repeated across fan sites, and there's no single reliable place that tells you: is this actually confirmed, when's it landing, and where do I watch it. It didn't stay a hunch for long — see below.</p>
 
       <div class="grid-3 mt-50">
         <div class="card finding-card"><p class="finding-card__label">Signal problem</p><p>Renewal news is noisy — rumour, leak and official confirmation all look identical scrolling a timeline. Users need those told apart, not blended together.</p></div>
         <div class="card finding-card"><p class="finding-card__label">Trust problem</p><p>Where-to-watch information goes stale fast as licensing deals shift. A tracker that's wrong erodes trust faster than one that's simply incomplete.</p></div>
         <div class="card finding-card"><p class="finding-card__label">Attention problem</p><p>A tracker only works if updates reach you — checking an app is a habit most people won't form on their own, which turned out to matter more than expected (see the feedback pivot below).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="section" id="research" data-observe="research">
+    <div class="container">
+      <p class="eyebrow">Research</p>
+      <h2 class="h2">What the data — and other people's reviews — already say about this.</h2>
+      <p class="lede" style="max-width:660px;">Not primary user interviews — desk research: published survey data on streaming behaviour, plus real reviews of the trackers people already use to solve this exact problem. Three findings kept coming up, and each one maps to a specific decision in Next Season.</p>
+
+      <div class="grid-3 mt-44">
+        <div class="card stat-card">
+          <div class="stat-card__value">4</div>
+          <div class="stat-card__desc">average paid streaming subscriptions per US household — 90% of households now have at least one</div>
+          <p class="cite">Source: <a href="https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html" target="_blank" rel="noopener">Deloitte, 2025 Digital Media Trends</a></p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-card__value" style="font-size:1.9rem;">110 hrs</div>
+          <div class="stat-card__desc">a year the average American spends just deciding what to watch — nearly five full days</div>
+          <p class="cite">Source: <a href="https://www.businesswire.com/news/home/20241218932475/en/Lost-in-the-Stream-Survey-Finds-Americans-Waste-Nearly-Five-Days-a-Year-Just-Deciding-What-to-Watch" target="_blank" rel="noopener">UserTesting / Talker Research</a></p>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-card__value">1 in 5</div>
+          <div class="stat-card__desc">viewers give up finding something to watch and abandon the session with nothing on</div>
+          <p class="cite">Source: <a href="https://www.streamtvinsider.com/video/choice-fatigue-leads-20-viewers-ditch-their-tv-session" target="_blank" rel="noopener">Nielsen, State of Play</a></p>
+        </div>
+      </div>
+
+      <p class="site-label" style="margin-top:56px;">What the trackers people already use get wrong</p>
+      <div class="grid-3" style="margin-top:24px;">
+        <div class="card finding-card">
+          <p class="finding-card__label">"Wrong where-to-watch, often"</p>
+          <p>JustWatch reviewers report "where to watch" data being wrong often enough that some stop trusting it outright — reviews cite specific seasons still listed on platforms that dropped them long ago.</p>
+          <p class="cite">Source: <a href="https://www.trustpilot.com/review/www.justwatch.com" target="_blank" rel="noopener">JustWatch reviews, Trustpilot</a></p>
+          <p class="finding-card__fix" style="color:var(--accent-2);margin-top:12px;font-size:0.86rem;">→ Fix: a visible "Checked Xh ago" timestamp on every card, synced straight from TMDB rather than an opaque aggregator — the source is shown, not just asserted.</p>
+        </div>
+        <div class="card finding-card">
+          <p class="finding-card__label">"Still shows last year's season"</p>
+          <p>TV Time reviewers describe the app still listing a show at last year's season well after a new one aired — status information that's gone stale doesn't just fail to help, it actively misleads.</p>
+          <p class="cite">Source: <a href="https://justuseapp.com/en/app/431065232/tv-time-track-shows-movies/reviews" target="_blank" rel="noopener">TV Time reviews</a></p>
+          <p class="finding-card__fix" style="color:var(--accent-2);margin-top:12px;font-size:0.86rem;">→ Fix: five explicit statuses (renewed / airing / hiatus / rumored / ended) refreshed from live data, instead of one label that quietly falls out of date.</p>
+        </div>
+        <div class="card finding-card">
+          <p class="finding-card__label">"It gets lost at the bottom of the list and I miss it"</p>
+          <p>A Trakt reviewer's exact complaint: without a way to surface what just changed, a new season landing looks no different from nothing happening — you only find out if you go looking for it.</p>
+          <p class="cite">Source: <a href="https://justuseapp.com/en/app/1228141510/tv-show-tracker-trakt-client/reviews" target="_blank" rel="noopener">Trakt reviews</a></p>
+          <p class="finding-card__fix" style="color:var(--accent-2);margin-top:12px;font-size:0.86rem;">→ Fix: a dedicated Recent Updates feed first, then — once testing showed pull-only updates weren't enough — real push notifications by email.</p>
+        </div>
       </div>
     </div>
   </section>

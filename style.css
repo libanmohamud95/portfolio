@@ -846,6 +846,8 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   margin-bottom: 12px;
 }
 .finding-card p:last-child { color: var(--text); font-size: 0.94rem; }
+.cite { font-size: 0.72rem; color: var(--muted); margin-top: 10px; }
+.cite a { text-decoration: underline; text-underline-offset: 2px; }
 
 .stat-card { padding: 28px 22px; }
 .stat-card__value {
