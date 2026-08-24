@@ -527,7 +527,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   display: block;
   object-fit: cover;
   object-position: top;
-  height: 192px;
+  aspect-ratio: 15/8;
 }
 
 /* Munch cover: three phone snapshots */
@@ -551,12 +551,12 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   box-shadow: 0 20px 44px rgba(0,0,0,0.45);
 }
 .munch-cover__phone--left {
-  left: 26px; bottom: -70px; width: 150px;
+  left: 4.8%; bottom: -20%; width: 27.7%;
   transform: rotate(-7deg);
   z-index: 1;
 }
 .munch-cover__phone--center {
-  left: 50%; bottom: -78px; width: 160px;
+  left: 50%; bottom: -22.3%; width: 29.5%;
   transform: translateX(-50%);
   border-radius: 24px;
   border-color: rgba(245,241,234,0.16);
@@ -564,7 +564,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   z-index: 2;
 }
 .munch-cover__phone--right {
-  right: 26px; bottom: -70px; width: 150px;
+  right: 4.8%; bottom: -20%; width: 27.7%;
   transform: rotate(7deg);
   z-index: 1;
 }
