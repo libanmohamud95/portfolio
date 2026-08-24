@@ -489,7 +489,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .browser-window {
   position: relative;
   width: 88%;
-  margin-top: 26px;
+  margin-top: 46px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 20px 44px rgba(0,0,0,0.5);
