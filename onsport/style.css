@@ -483,6 +483,8 @@ input:focus-visible, textarea:focus-visible { outline: none; }
 }
 .change:last-child { border-bottom: 1px solid var(--rule); }
 .change__label {
+  /* Nudges the label so the tops of its capitals line up with the smaller text in the other two columns */
+  padding-top: 1.5px;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.2;
@@ -491,7 +493,6 @@ input:focus-visible, textarea:focus-visible { outline: none; }
 }
 .change__head {
   margin: 0;
-  padding-top: 2px;
   font-size: 20px;
   line-height: 1.4;
   font-weight: 400;
@@ -500,7 +501,6 @@ input:focus-visible, textarea:focus-visible { outline: none; }
 }
 .change__body {
   margin: 0;
-  padding-top: 4px;
   color: var(--text-body);
   font-size: 15px;
   line-height: 1.65;
