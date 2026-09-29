@@ -16,6 +16,5 @@ Form notifications and add an email notification to **info@onsportai.com**. On s
 page falls back to a pre-filled `mailto:info@onsportai.com`.
 
 ## Open items
-- Instagram and LinkedIn URLs (footer links are `#` placeholders).
-- SVG versions of the logo.
+- SVG versions of the logo (optional: the PNGs are sharp at the sizes used; an SVG can be exported from the .ai/.pdf/.eps source files).
 - Confirm licensing of the photo-card images.
