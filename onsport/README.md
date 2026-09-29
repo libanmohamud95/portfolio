@@ -11,9 +11,9 @@ Run locally: `python3 -m http.server --directory onsport` and open http://localh
 
 ## Demo form
 The form is wired to **Netlify Forms** (`name="demo-request"`). After deploying, open Netlify → Forms →
-Form notifications and add an email notification to **info@onsportai.com**. On success the card shows
+Form notifications and add an email notification to **info@onsport.ai**. On success the card shows
 "Thanks, we'll be in touch shortly." If the handler can't be reached (e.g. not hosted on Netlify), the
-page falls back to a pre-filled `mailto:info@onsportai.com`.
+page falls back to a pre-filled `mailto:info@onsport.ai`.
 
 ## Open items
 - **Before launch on the client domain:** remove the `noindex` meta tag in `index.html` and the `X-Robots-Tag` header in `netlify.toml`, which keep the preview out of search engines. Also change `onsportai.netlify.app` in the `og:url`, `og:image` and `twitter:image` tags to the client domain.

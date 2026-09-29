@@ -84,7 +84,7 @@ if (!reduceMotion) {
   drift();
 }
 
-// Demo form: validate, then post to Netlify Forms (emails info@onsportai.com).
+// Demo form: validate, then post to Netlify Forms (emails info@onsport.ai).
 // If the handler can't be reached, fall back to a pre-filled email.
 const form = document.getElementById('demo-form');
 const done = document.getElementById('demo-done');
@@ -111,7 +111,7 @@ const mailtoFallback = (data) => {
     '',
     data.get('message').trim(),
   ].join('\n');
-  window.location.href = 'mailto:info@onsportai.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.location.href = 'mailto:info@onsport.ai?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 };
 
 form.addEventListener('input', (e) => {
