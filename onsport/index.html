@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnSport AI — Know the risk before it becomes an injury</title>
+  <meta name="description" content="OnSport AI fuses computer vision and machine learning to identify injury risk and deliver league-wide data for professional sport." />
+  <meta name="theme-color" content="#07080A" />
+  <meta property="og:title" content="OnSport AI" />
+  <meta property="og:description" content="Know the risk before it becomes an injury." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/onsport-hero-v2-still.jpg" />
+  <link rel="icon" type="image/png" href="assets/onsport-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/onsport-hero-v2-still.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav-wrap">
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#top" class="logo" aria-label="OnSport AI home">
+        <img src="assets/onsport-icon.png" alt="" class="logo__icon" width="19" height="28" />
+        <img src="assets/onsport-wordmark.png" alt="OnSport AI" class="logo__word" width="69" height="20" />
+      </a>
+      <div class="nav__links">
+        <a href="#changes">Platform</a>
+        <a href="#team">Team</a>
+        <a href="#partners">Partners</a>
+      </div>
+      <a href="#demo" class="btn btn--light btn--sm">Book a demo</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 1. HERO -->
+    <header id="top" class="hero">
+      <video class="hero__video" id="hero-video" muted loop playsinline preload="auto"
+             poster="assets/onsport-hero-v2-still.jpg" aria-hidden="true">
+        <source src="assets/onsport-hero-v2.webm" type="video/webm" />
+        <source src="assets/onsport-hero-v2.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <h1 class="hero__title">Know the risk before it becomes an injury.</h1>
+        <p class="hero__sub">OnSport AI fuses computer vision and machine learning to give a clear analysis of how athletes are performing in the moment. From risk identification, to proprietary data aggregation, teams and leagues have the insight to improve performance while providing fans with an in depth look into the action.</p>
+        <div class="hero__cta">
+          <a href="#demo" class="btn btn--light btn--lg">Book a demo <span aria-hidden="true">→</span></a>
+          <a href="#changes" class="btn btn--ghost btn--lg">See what it changes</a>
+        </div>
+      </div>
+
+      <div class="hero__strip">
+        <span>Computer vision · Injury risk</span>
+        <button type="button" class="video-toggle" id="video-toggle" aria-pressed="false" aria-label="Pause background video">
+          <span class="video-toggle__icon" aria-hidden="true">❚❚</span><span class="video-toggle__text">Pause</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. WHERE WE WORK -->
+    <section id="partners" class="section">
+      <div class="container">
+        <div class="intro">
+          <div class="intro__head">
+            <h2 class="h2">Working With Professional Athletes Across 4 Continents</h2>
+          </div>
+          <div class="intro__body">
+            <p class="lead">OnSport AI works with professional teams in the United States, Europe, Asia and Latin America, alongside professional leagues and broadcast partners.</p>
+          </div>
+        </div>
+
+        <ul class="regions" role="list">
+          <li class="region">
+            <div class="region__map" aria-hidden="true">
+              <img src="assets/world-dots.svg" alt="" style="left:-54.55%;top:-22.55%;width:454.55%;" />
+            </div>
+            <span class="region__name">United States</span>
+          </li>
+          <li class="region">
+            <div class="region__map" aria-hidden="true">
+              <img src="assets/world-dots.svg" alt="" style="left:-233.33%;top:-22.04%;width:555.56%;" />
+            </div>
+            <span class="region__name">Europe</span>
+          </li>
+          <li class="region">
+            <div class="region__map" aria-hidden="true">
+              <img src="assets/world-dots.svg" alt="" style="left:-336.36%;top:-22.55%;width:454.55%;" />
+            </div>
+            <span class="region__name">Asia</span>
+          </li>
+          <li class="region">
+            <div class="region__map" aria-hidden="true">
+              <img src="assets/world-dots.svg" alt="" style="left:-69.23%;top:-72.49%;width:384.62%;" />
+            </div>
+            <span class="region__name">Latin America</span>
+          </li>
+        </ul>
+
+        <ul class="photos" role="list">
+          <li class="photo">
+            <img src="assets/card-teams.jpg" alt="" loading="lazy" decoding="async" class="photo__img photo__img--bright" style="object-position:60% 30%;" data-drift="18" />
+            <div class="photo__text">
+              <h3 class="photo__title">Professional teams</h3>
+              <p>Performance and medical staff inside professional clubs, using the same read on player movement the coaching staff already trusts.</p>
+            </div>
+          </li>
+          <li class="photo">
+            <img src="assets/card-leagues.jpg" alt="" loading="lazy" decoding="async" class="photo__img" style="object-position:62% 50%;" data-drift="18" />
+            <div class="photo__text">
+              <h3 class="photo__title">Professional leagues</h3>
+              <p>League-level work across competitions, not a single-club tool bolted onto one training room.</p>
+            </div>
+          </li>
+          <li class="photo">
+            <img src="assets/card-broadcast.jpg" alt="" loading="lazy" decoding="async" class="photo__img" style="object-position:50% 35%;" data-drift="18" />
+            <div class="photo__text">
+              <h3 class="photo__title">Broadcast partners</h3>
+              <p>The same tracking that informs performance staff also supports how the game is shown and understood.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. DATA PARTNERSHIP -->
+    <section class="section section--flush-top">
+      <div class="container data-panel">
+        <div class="data-panel__grid" aria-hidden="true"></div>
+        <div class="intro">
+          <div class="intro__head">
+            <h2 class="h2">League-Wide Partner Providing Enhanced Data</h2>
+          </div>
+          <p class="lead lead--bright intro__body">With proprietary technology, OnSport AI provides leagues with customized data to enhance digital media assets, giving fans and broadcasters a more detailed look into how the game is played.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHO'S BEHIND IT -->
+    <section id="team" class="section section--light">
+      <div class="container">
+        <div class="team__head">
+          <div class="label">Who’s behind it</div>
+          <h2 class="h2">Built by leaders from both management and medicine who understand the complexities, pressures, and consequences behind every decision within the organization</h2>
+        </div>
+
+        <div class="stats">
+          <div class="stats__dots" aria-hidden="true"></div>
+          <dl class="stats__row">
+            <div class="stat">
+              <dt class="stat__num" data-count="3" data-suffix="">3</dt>
+              <dd class="stat__label">Exits</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__num" data-count="30" data-suffix="+">30+</dt>
+              <dd class="stat__label">Years in pro sports</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__num" data-count="10" data-suffix="+">10+</dt>
+              <dd class="stat__label">Years in the NBA</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__num">PhDs</dt>
+              <dd class="stat__label">Published researchers, executives and GMs</dd>
+            </div>
+          </dl>
+          <div class="stats__edge" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHAT IT CHANGES -->
+    <section id="changes" class="section">
+      <div class="container">
+        <h2 class="h2 changes__title">What it changes</h2>
+        <div class="changes">
+          <div class="change">
+            <div class="change__label">Risk identification</div>
+            <h3 class="change__head">See elevated risk as an actionable data point</h3>
+            <p class="change__body">Identify risk via our patented pipeline to analyze human movement</p>
+          </div>
+          <div class="change">
+            <div class="change__label">Return-to-play</div>
+            <h3 class="change__head">Make the call with more than a gut feeling.</h3>
+            <p class="change__body">Give performance staff an objective read on a player's movement to inform return-to-play decisions, alongside the judgment they already trust.</p>
+          </div>
+          <div class="change">
+            <div class="change__label">Built for your staff</div>
+            <h3 class="change__head">Fits into how your performance team already works.</h3>
+            <p class="change__body">No new workflow to learn, no roster of new tools — just a clearer signal handed to the people already making these calls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. WHY THIS MATTERS -->
+    <section class="section section--press">
+      <div class="press__dots" aria-hidden="true"></div>
+      <div class="container two-col two-col--center">
+        <div>
+          <div class="label label--white">Why this matters</div>
+          <h2 class="h2 h2--spaced">Soft-tissue injuries have become a story sports media covers on its own.</h2>
+          <p class="press__copy">Calf strains and Achilles injuries in the NBA have drawn enough attention that national outlets are now writing about the trend directly — and naming the people trying to do something about it.</p>
+        </div>
+        <figure class="quote">
+          <div class="quote__meta">
+            <span class="quote__source">Yahoo Sports</span>
+            <span class="mono quote__date">Dec 2025</span>
+          </div>
+          <blockquote class="quote__body">
+            <p>“Brett Burman linked up with Adam Petway, the former director of performance of the Washington Wizards, and founded a new company called OnSport AI that tries to revolutionize injury prevention in pro sports.”</p>
+            <p class="quote__second">“OnSport AI uses computer vision and machine learning fused with tracking data to identify injury risk in real-time.”</p>
+          </blockquote>
+          <figcaption class="quote__caption">
+            <span>Tom Haberstroh, Yahoo Sports — December 2025</span>
+            <a href="https://sports.yahoo.com/nba/article/the-two-scariest-words-in-the-nba-calf-strain-174810484.html" target="_blank" rel="noopener noreferrer">Read the full article ↗</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 7. GET STARTED -->
+    <section id="demo" class="section section--light demo">
+      <div class="container two-col">
+        <div>
+          <div class="label">Get started</div>
+          <h2 class="demo__title">Power your league and organization</h2>
+          <p class="demo__copy">Tell us a bit about your team and we’ll set up a time to walk through it.</p>
+        </div>
+
+        <div class="glass">
+          <div class="glass__line" aria-hidden="true"></div>
+
+          <div class="demo__done" id="demo-done" hidden tabindex="-1">
+            <div class="label">Request sent</div>
+            <p class="demo__done-title">Thanks, we'll be in touch shortly.</p>
+          </div>
+
+          <!-- Netlify Forms: submissions are emailed to info@onsportai.com (set the notification in Netlify → Forms). -->
+          <form class="form" id="demo-form" name="demo-request" method="POST" data-netlify="true" netlify-honeypot="company-website" novalidate>
+            <input type="hidden" name="form-name" value="demo-request" />
+            <input type="hidden" name="subject" value="Demo request" />
+            <p class="visually-hidden" aria-hidden="true">
+              <label>Leave this empty <input name="company-website" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
+            <div class="field">
+              <fieldset class="field__outline" aria-hidden="true"><legend>Full name</legend></fieldset>
+              <label class="visually-hidden" for="f-name">Full name</label>
+              <input class="field__input" type="text" id="f-name" name="name" placeholder="Name" autocomplete="name" required aria-describedby="err-name" />
+            </div>
+            <div class="field">
+              <fieldset class="field__outline" aria-hidden="true"><legend>Email</legend></fieldset>
+              <label class="visually-hidden" for="f-email">Email</label>
+              <input class="field__input" type="email" id="f-email" name="email" placeholder="name@club.com" autocomplete="email" required aria-describedby="err-email" />
+            </div>
+            <div class="field field--full">
+              <fieldset class="field__outline" aria-hidden="true"><legend>Team / organization</legend></fieldset>
+              <label class="visually-hidden" for="f-team">Team / organization</label>
+              <input class="field__input" type="text" id="f-team" name="team" placeholder="Club, league or broadcaster" autocomplete="organization" />
+            </div>
+            <div class="field field--full">
+              <fieldset class="field__outline" aria-hidden="true"><legend>What are you hoping to solve?</legend></fieldset>
+              <label class="visually-hidden" for="f-message">What are you hoping to solve?</label>
+              <textarea class="field__input field__input--multi" id="f-message" name="message" rows="4" placeholder="A few lines on what you’d like to see"></textarea>
+            </div>
+
+            <div class="form__errors" id="form-errors" aria-live="polite" hidden>
+              <p class="form__error" id="err-name" hidden>Please enter your name.</p>
+              <p class="form__error" id="err-email" hidden>Please enter a valid email address.</p>
+              <p class="form__error" id="err-send" hidden>Something went wrong sending your request. Please email <a href="mailto:info@onsportai.com">info@onsportai.com</a>.</p>
+            </div>
+
+            <button type="submit" class="btn btn--dark btn--submit">Book a demo <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo" aria-label="OnSport AI home">
+        <img src="assets/onsport-icon.png" alt="" class="logo__icon" width="19" height="28" />
+        <img src="assets/onsport-wordmark.png" alt="OnSport AI" class="logo__word" width="69" height="20" />
+      </a>
+      <div class="footer__links">
+        <a href="#demo">Contact</a>
+        <!-- TODO: Instagram and LinkedIn URLs to be supplied by the client -->
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="footer__copy">© 2026 OnSport AI</div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
