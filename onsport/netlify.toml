@@ -1,0 +1,3 @@
+# Used when this folder is deployed as its own Netlify project (Base directory: onsport)
+[build]
+  publish = "."
