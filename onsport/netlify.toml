@@ -1,3 +1,9 @@
 # Used when this folder is deployed as its own Netlify project (Base directory: onsport)
 [build]
   publish = "."
+
+# Preview only: keeps search engines from listing the site. Remove at launch on the client domain.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
