@@ -17,4 +17,3 @@ page falls back to a pre-filled `mailto:info@onsport.ai`.
 
 ## Open items
 - SVG versions of the logo (optional: the PNGs are sharp at the sizes used; an SVG can be exported from the .ai/.pdf/.eps source files).
-- Confirm licensing of the photo-card images.
