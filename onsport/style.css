@@ -262,7 +262,7 @@ input:focus-visible, textarea:focus-visible { outline: none; }
   padding: 0 24px 32px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
   font-family: var(--mono);
