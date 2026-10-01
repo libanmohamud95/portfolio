@@ -466,6 +466,32 @@ input:focus-visible, textarea:focus-visible { outline: none; }
   background: linear-gradient(90deg, rgba(11, 13, 16, 0), var(--ink) 50%, rgba(11, 13, 16, 0));
   opacity: 0.8;
 }
+.bios {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  /* One column until all three cards fit side by side, so no card is left alone on a row */
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 980px) {
+  .bios { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 13, 16, 0.06);
+}
+.bio__head { display: flex; align-items: center; gap: 16px; }
+.bio__photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.bio__name { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3; letter-spacing: -0.02em; color: var(--ink); }
+.bio__title { margin: 4px 0 0; font-size: 14px; line-height: 1.4; color: var(--ink-body); }
+.bio__text { margin: 0; font-size: 15px; line-height: 1.65; color: var(--ink-2); }
 @media (max-width: 520px) {
   .stat { border-left: 0; margin-left: 0; border-top: 1px solid var(--line); }
   .stat:first-child { border-top: 0; }
