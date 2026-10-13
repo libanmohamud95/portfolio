@@ -631,6 +631,48 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   box-shadow: 0 20px 44px rgba(0,0,0,0.35);
 }
 .shot-frame img { display: block; width: 100%; }
+.shot-frame {
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+.shot-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* Featured hero screenshot: large, centred, with an ambient glow behind it */
+.shot-hero {
+  position: relative;
+  max-width: 880px;
+  margin: 48px auto 0;
+}
+.shot-hero::before {
+  content: '';
+  position: absolute;
+  inset: -12% -8%;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(242,169,60,0.18), transparent 55%),
+    radial-gradient(circle at 82% 85%, rgba(91,141,239,0.16), transparent 55%);
+  z-index: 0;
+  pointer-events: none;
+}
+.shot-hero .shot-frame {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+}
+
+/* Alternating image + caption rows for the rest of the screenshot story */
+.shot-row {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  margin-top: 72px;
+}
+.shot-row--reverse { flex-direction: row-reverse; }
+.shot-row__media { flex: 1.15; min-width: 0; }
+.shot-row__text { flex: 0.85; min-width: 0; }
+.shot-row__text .site-label { margin-top: 0; }
+.shot-row__text p:not(.site-label) { color: var(--muted); font-size: 0.94rem; margin-top: 12px; }
 
 /* ============================================================
    ABOUT (homepage)
@@ -1818,4 +1860,5 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   .ns-dialog__grid { grid-template-columns: repeat(2, 1fr); }
   .ns-body { padding: 26px 18px 34px; }
   .role-note { flex-direction: column; padding: 22px; }
+  .shot-row, .shot-row--reverse { flex-direction: column; gap: 20px; margin-top: 48px; }
 }
