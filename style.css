@@ -623,16 +623,21 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .onsport-cover .browser-window { background: #0A0A0C; }
 .onsport-cover .browser-window__body img { display: block; width: 100%; }
 
-/* Case-study screenshot frame: used to embed real Figma/site screenshots */
+/* Case-study screenshot frame: used to embed real Figma/site screenshots.
+   Padded like a mat, so a screenshot with no margin of its own never
+   touches the frame edge. */
 .shot-frame {
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  overflow: hidden;
+  padding: 16px;
   box-shadow: 0 20px 44px rgba(0,0,0,0.35);
-}
-.shot-frame img { display: block; width: 100%; }
-.shot-frame {
   transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+.shot-frame img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius-md) - 6px);
 }
 .shot-frame:hover {
   transform: translateY(-4px);
@@ -643,12 +648,12 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .shot-hero {
   position: relative;
   max-width: 880px;
-  margin: 48px auto 0;
+  margin: 64px auto 0;
 }
 .shot-hero::before {
   content: '';
   position: absolute;
-  inset: -12% -8%;
+  inset: -6% -8% -10% -8%;
   background:
     radial-gradient(circle at 22% 20%, rgba(242,169,60,0.18), transparent 55%),
     radial-gradient(circle at 82% 85%, rgba(91,141,239,0.16), transparent 55%);
