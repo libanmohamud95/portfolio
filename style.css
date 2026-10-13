@@ -644,7 +644,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   box-shadow: 0 30px 60px rgba(0,0,0,0.45);
 }
 
-/* Featured hero screenshot: large, centred, with an ambient glow behind it */
+/* Featured hero screenshot: large, centred, in a frosted glass panel */
 .shot-hero {
   position: relative;
   max-width: 880px;
@@ -653,10 +653,12 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .shot-hero::before {
   content: '';
   position: absolute;
-  inset: -6% -8% -10% -8%;
-  background:
-    radial-gradient(circle at 22% 20%, rgba(242,169,60,0.18), transparent 55%),
-    radial-gradient(circle at 82% 85%, rgba(91,141,239,0.16), transparent 55%);
+  inset: -22px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: calc(var(--radius-md) + 18px);
   z-index: 0;
   pointer-events: none;
 }
@@ -1919,6 +1921,6 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   .ns-dialog__grid { grid-template-columns: repeat(2, 1fr); }
   .ns-body { padding: 26px 18px 34px; }
   .role-note { flex-direction: column; padding: 22px; }
-  .shot-row, .shot-row--reverse { flex-direction: column; gap: 20px; margin-top: 48px; }
+  .shot-row, .shot-row--reverse { flex-direction: column; align-items: stretch; gap: 20px; margin-top: 48px; }
   .compare-row { grid-template-columns: 1fr; }
 }
