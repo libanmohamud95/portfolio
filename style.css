@@ -40,9 +40,8 @@
   --border:    rgba(245,246,247,0.09);
 }
 
-/* OnSport AI case-study theme override — near-black and monochrome,
-   matching the real site's dark hero and grayscale photography, with a
-   warm amber accent for risk/highlight moments */
+/* OnSport AI case-study theme override — pure black and white, matching
+   the real shipped site exactly: no accent colour anywhere */
 [data-theme="onsport"] {
   --bg:        #0A0A0C;
   --surface:   #141417;
@@ -716,6 +715,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 }
 .compare-frame--after .compare-frame__label { color: var(--accent); }
 .compare-frame--after .compare-frame__label::before { background: var(--accent); }
+.compare-frame--before .compare-frame__media img { filter: grayscale(1); }
 .compare-frame__media {
   display: flex;
   align-items: center;
