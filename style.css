@@ -40,6 +40,21 @@
   --border:    rgba(245,246,247,0.09);
 }
 
+/* OnSport AI case-study theme override — near-black and monochrome,
+   matching the real site's dark hero and grayscale photography, with a
+   warm amber accent for risk/highlight moments */
+[data-theme="onsport"] {
+  --bg:        #0A0A0C;
+  --surface:   #141417;
+  --surface-2: #1C1C20;
+  --text:      #F5F5F7;
+  --muted:     #8C8D96;
+  --accent:    #F2A93C;
+  --accent-2:  #5B8DEF;
+  --accent-3:  #E35B4F;
+  --border:    rgba(245,245,247,0.09);
+}
+
 /* Next Season case-study theme override — the product's actual
    "Cinematic Indigo" palette, taken straight from its codebase */
 [data-theme="nextseason"] {
@@ -596,6 +611,27 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   font-size: 0.5rem; font-weight: 600; padding: 2px 6px; border-radius: 10px;
 }
 
+/* OnSport cover: cropped hero screenshot in a browser window */
+.onsport-cover {
+  background: linear-gradient(135deg, #18181c, #0A0A0C 65%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 16px 10px;
+}
+.onsport-cover .browser-window { background: #0A0A0C; }
+.onsport-cover .browser-window__body img { display: block; width: 100%; }
+
+/* Case-study screenshot frame: used to embed real Figma/site screenshots */
+.shot-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 44px rgba(0,0,0,0.35);
+}
+.shot-frame img { display: block; width: 100%; }
+
 /* ============================================================
    ABOUT (homepage)
    ============================================================ */
@@ -857,6 +893,8 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   color: var(--accent);
 }
 .stat-card__value--sm { font-size: 2.2rem; }
+.stat-card__value.accent-2 { color: var(--accent-2); }
+.stat-card__value.accent-3 { color: var(--accent-3); }
 .stat-card__desc {
   margin-top: 8px;
   font-size: 0.85rem;
