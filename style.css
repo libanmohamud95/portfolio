@@ -353,6 +353,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   flex-wrap: wrap;
 }
 .hero__visual { position: relative; min-width: 0; }
+.hero__visual .browser-window { width: 100%; margin-top: 0; }
 .hero__mesh {
   width: 100%;
   aspect-ratio: 4/5;
@@ -448,6 +449,28 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+.project-card__link--disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+/* F11 placeholder cover: no screenshot yet, case study coming soon */
+.f11-cover {
+  background: linear-gradient(135deg, var(--surface-2, #1c1c20), var(--bg) 65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f11-cover__mark {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 34px;
 }
 
 .project-card__tag {
