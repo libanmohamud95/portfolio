@@ -1922,6 +1922,14 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 .arch-card h4 { font-size: 0.95rem; margin: 0 0 8px; }
 .arch-card p { color: var(--muted); font-size: 0.82rem; }
 
+/* Homepage hero headline: the narrower desktop column (widened to fit
+   the larger screenshot) wraps the default .h1 size to six lines on
+   smaller laptop widths, so trim it slightly above the mobile
+   breakpoint only; mobile keeps the original .h1 clamp untouched. */
+@media (min-width: 992px) {
+  .hero .h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); }
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
