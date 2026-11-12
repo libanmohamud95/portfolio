@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
 
@@ -58,17 +58,19 @@
         </div>
       </div>
       <div class="hero__visual">
-        <div class="browser-window">
-          <div class="browser-window__bar">
-            <span class="browser-window__dot browser-window__dot--red"></span>
-            <span class="browser-window__dot browser-window__dot--yellow"></span>
-            <span class="browser-window__dot browser-window__dot--green"></span>
-            <span class="browser-window__url">onsport.ai</span>
+        <a href="onsport.html" class="scroll-frame" aria-label="View the OnSport AI case study">
+          <div class="browser-window scroll-frame__window">
+            <div class="browser-window__bar">
+              <span class="browser-window__dot browser-window__dot--red"></span>
+              <span class="browser-window__dot browser-window__dot--yellow"></span>
+              <span class="browser-window__dot browser-window__dot--green"></span>
+              <span class="browser-window__url">onsport.ai</span>
+            </div>
+            <div class="scroll-frame__viewport">
+              <img class="scroll-frame__image" src="assets/case-studies/onsport/onsport-scroll.webp" width="1440" height="6328" alt="Scrolling preview of the OnSport AI website" />
+            </div>
           </div>
-          <div class="browser-window__body">
-            <img src="assets/case-studies/onsport/onsport-hero.png" alt="OnSport AI homepage" />
-          </div>
-        </div>
+        </a>
         <a href="https://onsport.ai" target="_blank" rel="noopener" class="phone-caption" style="display:block;">OnSport AI · live at onsport.ai</a>
       </div>
     </div>
@@ -257,6 +259,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=1"></script>
 </body>
 </html>

@@ -180,3 +180,111 @@ if (waveform) {
   const bars = Array.from({ length: 40 }, (_, i) => 6 + Math.round(Math.abs(Math.sin(i * 0.7)) * 16));
   waveform.innerHTML = bars.map((h) => `<div class="waveform__bar" style="height:${h}px;"></div>`).join('');
 }
+
+// ============================================================
+// HOME HERO: OnSport AI scrolling screenshot preview
+// Auto-scrolls a tall full-page screenshot behind a fixed-height
+// window via a translateY transform (not native scrolling), pauses at
+// the bottom, eases back to the top, and loops. On desktop, hovering
+// pauses the auto-scroll and lets the visitor scrub with the mouse
+// wheel; it resumes from wherever they left it on mouseleave. Mobile
+// keeps the auto-scroll (slower) with no hover/wheel behaviour.
+// Skipped entirely for prefers-reduced-motion, leaving the image at
+// its static top position.
+// ============================================================
+(() => {
+  const viewport = document.querySelector('.scroll-frame__viewport');
+  const image = document.querySelector('.scroll-frame__image');
+  if (!viewport || !image) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+  const canHover = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // Phase durations in ms. Mobile is slower overall, per the brief
+  // ("around 30 seconds"), with the same pause/return shape.
+  function timings() {
+    return isMobile()
+      ? { down: 30000, pauseBottom: 2000, up: 3000 }
+      : { down: 22000, pauseBottom: 2000, up: 3000 };
+  }
+
+  function easeInOutSine(t) {
+    return 0.5 * (1 - Math.cos(Math.PI * t));
+  }
+
+  let maxOffset = 0;
+  function measure() {
+    maxOffset = Math.max(0, image.offsetHeight - viewport.offsetHeight);
+  }
+  measure();
+
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(measure, 150);
+  });
+
+  let offset = 0;
+  let phase = 'down'; // 'down' -> 'pauseBottom' -> 'up' -> 'down' ...
+  let phaseElapsed = 0;
+  let lastTime = null;
+  let hoverPaused = false;
+
+  function render() {
+    image.style.transform = `translateY(-${offset}px)`;
+  }
+
+  function tick(now) {
+    if (lastTime === null) lastTime = now;
+    const dt = now - lastTime;
+    lastTime = now;
+
+    if (!hoverPaused && maxOffset > 0) {
+      const t = timings();
+      phaseElapsed += dt;
+
+      if (phase === 'down') {
+        // Linear, not eased: this keeps the resume-from-hover mapping
+        // below (which reconstructs phaseElapsed from the current
+        // offset) exact, so there's no jump when the pointer leaves.
+        const progress = Math.min(1, phaseElapsed / t.down);
+        offset = maxOffset * progress;
+        if (progress >= 1) { phase = 'pauseBottom'; phaseElapsed = 0; }
+      } else if (phase === 'pauseBottom') {
+        offset = maxOffset;
+        if (phaseElapsed >= t.pauseBottom) { phase = 'up'; phaseElapsed = 0; }
+      } else {
+        const progress = Math.min(1, phaseElapsed / t.up);
+        offset = maxOffset * (1 - easeInOutSine(progress));
+        if (progress >= 1) { phase = 'down'; phaseElapsed = 0; }
+      }
+      render();
+    }
+
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // Desktop hover: pause the auto-scroll and let the wheel scrub the
+  // frame directly; resume (continuing the "down" phase from wherever
+  // the visitor left it) once the pointer leaves.
+  viewport.addEventListener('mouseenter', () => {
+    if (!canHover()) return;
+    hoverPaused = true;
+  });
+  viewport.addEventListener('mouseleave', () => {
+    if (!canHover()) return;
+    hoverPaused = false;
+    lastTime = null;
+    phase = 'down';
+    phaseElapsed = maxOffset > 0 ? (offset / maxOffset) * timings().down : 0;
+  });
+  viewport.addEventListener('wheel', (e) => {
+    if (!canHover() || !hoverPaused || maxOffset <= 0) return;
+    e.preventDefault();
+    offset = Math.min(maxOffset, Math.max(0, offset + e.deltaY));
+    render();
+  }, { passive: false });
+})();

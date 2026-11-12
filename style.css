@@ -354,6 +354,40 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 }
 .hero__visual { position: relative; min-width: 0; }
 .hero__visual .browser-window { width: 100%; margin-top: 0; }
+
+/* Hero scrolling preview: a tall full-page screenshot auto-scrolls
+   behind a fixed-height masked window, cross-faded via transform so it
+   stays smooth, with hover-to-pause-and-scrub on desktop. */
+.scroll-frame {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.scroll-frame:hover .scroll-frame__window {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  transform: translateY(-3px);
+}
+.scroll-frame__window { transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out); }
+.scroll-frame__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: #0A0A0C;
+}
+.scroll-frame__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateY(0);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-frame__image { transform: none !important; }
+}
 .hero__mesh {
   width: 100%;
   aspect-ratio: 4/5;
