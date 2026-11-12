@@ -423,14 +423,23 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
 /* ============================================================
    PROJECTS
    ============================================================ */
-.project-card { overflow: hidden; padding: 0; }
+.project-card { overflow: hidden; padding: 0; display: flex; flex-direction: column; }
 .project-card__cover {
   width: 100%;
   aspect-ratio: 16/10;
   position: relative;
   overflow: hidden;
+  flex-shrink: 0;
 }
-.project-card__body { padding: 26px; position: relative; z-index: 2; background: var(--surface); }
+.project-card__body {
+  padding: 26px;
+  position: relative;
+  z-index: 2;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .project-card__body h3 {
   font-family: var(--font-head);
   font-size: 1.2rem;
@@ -449,6 +458,7 @@ a:hover .arrow, .btn:hover .arrow { transform: translateX(3px); }
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  margin-top: auto;
 }
 .project-card__link--disabled {
   color: var(--muted);
